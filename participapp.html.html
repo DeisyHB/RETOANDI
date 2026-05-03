@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParticipApp – Conoce a tus estudiantes, impulsa su potencial</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  @keyframes fadeUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(16,185,129,.35); } 50% { box-shadow: 0 0 0 14px rgba(16,185,129,0); } }
+  @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+  @keyframes gradientShift { 0%,100% { background-position:0% 50%; } 50% { background-position:100% 50%; } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; background:#f8fafc; color:#0f172a; overflow-x:hidden; }
+</style>
+</head>
+<body>
+
+<!-- ░░ NAV ░░ -->
+<nav style="position:fixed;top:0;left:0;width:100%;z-index:999;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(8,30,63,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);">
+  <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:#fff;letter-spacing:-.5px;">
+    Particip<span style="color:#10b981;">App</span>
+  </span>
+  <a href="https://www.youtube.com" target="_blank" rel="noopener" style="font-family:'Syne',sans-serif;font-weight:600;font-size:.88rem;color:#10b981;border:1.5px solid #10b981;padding:9px 22px;border-radius:50px;text-decoration:none;transition:background .2s,color .2s;letter-spacing:.3px;"
+    onmouseover="this.style.background='#10b981';this.style.color='#fff'"
+    onmouseout="this.style.background='transparent';this.style.color='#10b981'">
+    Ver Demo →
+  </a>
+</nav>
+
+<!-- ░░ HERO ░░ -->
+<section style="min-height:100vh;background:linear-gradient(135deg,#081e3f 0%,#0b2d56 50%,#083d2f 100%);background-size:200% 200%;animation:gradientShift 10s ease infinite;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:120px 5% 80px;position:relative;overflow:hidden;">
+
+  <!-- decorative blobs -->
+  <div style="position:absolute;width:520px;height:520px;background:radial-gradient(circle,rgba(16,185,129,.18) 0%,transparent 70%);border-radius:50%;top:-100px;right:-100px;pointer-events:none;"></div>
+  <div style="position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.15) 0%,transparent 70%);border-radius:50%;bottom:-80px;left:-80px;pointer-events:none;"></div>
+
+  <div style="animation:fadeUp .9s ease both;">
+    <span style="display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);color:#34d399;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:28px;">
+      ✦ Inteligencia artificial para formación
+    </span>
+  </div>
+
+  <h1 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.4rem,6vw,4.2rem);color:#fff;line-height:1.1;max-width:780px;letter-spacing:-1.5px;animation:fadeUp .9s .1s ease both;opacity:0;animation-fill-mode:both;">
+    Conoce a tus estudiantes,<br>
+    <span style="background:linear-gradient(90deg,#10b981,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">impulsa su potencial</span>
+  </h1>
+
+  <p style="color:rgba(255,255,255,.65);font-size:clamp(1rem,2vw,1.2rem);font-weight:300;max-width:600px;line-height:1.75;margin:28px auto 44px;animation:fadeUp .9s .2s ease both;opacity:0;animation-fill-mode:both;">
+    ParticipApp analiza automáticamente la participación de estudiantes becados en mentorías, talleres y eventos, y genera reportes inteligentes para que tomes mejores decisiones.
+  </p>
+
+  <div style="animation:fadeUp .9s .3s ease both;opacity:0;animation-fill-mode:both;">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#10b981,#059669);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 38px;border-radius:50px;text-decoration:none;letter-spacing:.2px;animation:pulse 2.5s infinite;box-shadow:0 8px 32px rgba(16,185,129,.4);"
+      onmouseover="this.style.transform='scale(1.04)'"
+      onmouseout="this.style.transform='scale(1)'">
+      ▶ Ver Demo
+    </a>
+  </div>
+
+  <!-- floating badge -->
+  <div style="margin-top:64px;display:flex;gap:32px;flex-wrap:wrap;justify-content:center;animation:fadeUp .9s .5s ease both;opacity:0;animation-fill-mode:both;">
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 24px;text-align:center;">
+      <p style="color:#10b981;font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;line-height:1;">+95%</p>
+      <p style="color:rgba(255,255,255,.55);font-size:.78rem;margin-top:4px;">ahorro en reportes</p>
+    </div>
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 24px;text-align:center;">
+      <p style="color:#10b981;font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;line-height:1;">3x</p>
+      <p style="color:rgba(255,255,255,.55);font-size:.78rem;margin-top:4px;">más visibilidad</p>
+    </div>
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 24px;text-align:center;">
+      <p style="color:#10b981;font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;line-height:1;">100%</p>
+      <p style="color:rgba(255,255,255,.55);font-size:.78rem;margin-top:4px;">automatizado</p>
+    </div>
+  </div>
+
+  <!-- scroll indicator -->
+  <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);animation:float 2s ease infinite;">
+    <div style="width:24px;height:38px;border:2px solid rgba(255,255,255,.25);border-radius:12px;display:flex;justify-content:center;padding-top:6px;">
+      <div style="width:4px;height:8px;background:rgba(255,255,255,.4);border-radius:2px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PROBLEMA ░░ -->
+<section style="padding:100px 5%;background:#fff;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <span style="display:inline-block;background:#ecfdf5;color:#059669;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">El Problema</span>
+      <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);color:#0f172a;letter-spacing:-1px;line-height:1.2;">El seguimiento manual<br><span style="color:#081e3f;">frena el impacto real</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;">
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;"
+        onmouseover="this.style.borderColor='#10b981';this.style.boxShadow='0 8px 32px rgba(16,185,129,.12)'"
+        onmouseout="this.style.borderColor='#e2e8f0';this.style.boxShadow='none'">
+        <div style="width:52px;height:52px;background:#fef2f2;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.6rem;">📊</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:10px;">Reportes que consumen semanas</h3>
+        <p style="color:#64748b;font-size:.93rem;line-height:1.7;">Los coordinadores dedican horas recopilando datos dispersos en hojas de cálculo, correos y listas de asistencia antes de generar un solo reporte.</p>
+      </div>
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:36px 32px;"
+        onmouseover="this.style.borderColor='#10b981';this.style.boxShadow='0 8px 32px rgba(16,185,129,.12)'"
+        onmouseout="this.style.borderColor='#e2e8f0';this.style.boxShadow='none'">
+        <div style="width:52px;height:52px;background:#fff7ed;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.6rem;">🔍</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:10px;">Visibilidad limitada del estudiante</h3>
+        <p style="color:#64748b;font-size:.93rem;line-height:1.7;">Sin datos integrados, es imposible detectar a tiempo a un becado en riesgo de desertar o que necesita apoyo adicional en su proceso formativo.</p>
+      </div>
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:36px 32px;"
+        onmouseover="this.style.borderColor='#10b981';this.style.boxShadow='0 8px 32px rgba(16,185,129,.12)'"
+        onmouseout="this.style.borderColor='#e2e8f0';this.style.boxShadow='none'">
+        <div style="width:52px;height:52px;background:#f0fdf4;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.6rem;">📋</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:10px;">Decisiones sin respaldo de datos</h3>
+        <p style="color:#64748b;font-size:.93rem;line-height:1.7;">Los programas de becas toman decisiones estratégicas basadas en intuición, no en evidencia, perdiendo la oportunidad de maximizar el impacto de sus recursos.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CÓMO FUNCIONA ░░ -->
+<section style="padding:100px 5%;background:linear-gradient(180deg,#081e3f 0%,#0b2d56 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;"></div>
+
+  <div style="max-width:1100px;margin:0 auto;position:relative;">
+    <div style="text-align:center;margin-bottom:72px;">
+      <span style="display:inline-block;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);color:#34d399;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">Cómo Funciona</span>
+      <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;letter-spacing:-1px;line-height:1.2;">3 pasos. Todo automático.<br><span style="color:#10b981;">Resultados reales.</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;align-items:center;">
+
+      <!-- step 1 -->
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:44px 36px;text-align:center;position:relative;"
+        onmouseover="this.style.background='rgba(16,185,129,.1)';this.style.borderColor='rgba(16,185,129,.4)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <div style="width:72px;height:72px;background:linear-gradient(135deg,#10b981,#059669);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;box-shadow:0 8px 24px rgba(16,185,129,.4);">📥</div>
+        <span style="font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;color:#10b981;letter-spacing:2px;text-transform:uppercase;">Paso 01</span>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin:12px 0 14px;letter-spacing:-.3px;">Conecta tus fuentes</h3>
+        <p style="color:rgba(255,255,255,.55);font-size:.92rem;line-height:1.75;">Integra tus listas de asistencia, plataformas de mentoría y registros de eventos. ParticipApp consolida todo en segundos.</p>
+      </div>
+
+      <!-- arrow -->
+      <div style="text-align:center;color:rgba(255,255,255,.2);font-size:2rem;padding:0 8px;display:flex;justify-content:center;align-items:center;">→</div>
+
+      <!-- step 2 -->
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:44px 36px;text-align:center;"
+        onmouseover="this.style.background='rgba(16,185,129,.1)';this.style.borderColor='rgba(16,185,129,.4)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <div style="width:72px;height:72px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;box-shadow:0 8px 24px rgba(59,130,246,.4);">🧠</div>
+        <span style="font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;color:#60a5fa;letter-spacing:2px;text-transform:uppercase;">Paso 02</span>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin:12px 0 14px;letter-spacing:-.3px;">IA analiza la participación</h3>
+        <p style="color:rgba(255,255,255,.55);font-size:.92rem;line-height:1.75;">Nuestro motor de inteligencia artificial identifica patrones, riesgos y oportunidades en el comportamiento de cada estudiante.</p>
+      </div>
+
+      <!-- arrow -->
+      <div style="text-align:center;color:rgba(255,255,255,.2);font-size:2rem;padding:0 8px;display:flex;justify-content:center;align-items:center;">→</div>
+
+      <!-- step 3 -->
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:44px 36px;text-align:center;"
+        onmouseover="this.style.background='rgba(16,185,129,.1)';this.style.borderColor='rgba(16,185,129,.4)'"
+        onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(255,255,255,.1)'">
+        <div style="width:72px;height:72px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;box-shadow:0 8px 24px rgba(139,92,246,.4);">📈</div>
+        <span style="font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;color:#a78bfa;letter-spacing:2px;text-transform:uppercase;">Paso 03</span>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin:12px 0 14px;letter-spacing:-.3px;">Recibe reportes automáticos</h3>
+        <p style="color:rgba(255,255,255,.55);font-size:.92rem;line-height:1.75;">Obtén reportes personalizados listos para presentar: por estudiante, cohorte, actividad o período. Sin esfuerzo manual.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ░░ A QUIÉN BENEFICIA ░░ -->
+<section style="padding:100px 5%;background:#f8fafc;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <span style="display:inline-block;background:#ecfdf5;color:#059669;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">Beneficiarios</span>
+      <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);color:#0f172a;letter-spacing:-1px;line-height:1.2;">Diseñado para quienes<br><span style="color:#081e3f;">transforman vidas</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+
+      <div style="background:#fff;border-radius:24px;padding:40px 32px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid #10b981;text-align:center;"
+        onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,.12)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,.06)'" style="transition:all .25s ease;">
+        <div style="font-size:2.8rem;margin-bottom:20px;">🎓</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:12px;">Programas de Becas</h3>
+        <p style="color:#64748b;font-size:.9rem;line-height:1.7;">Fundaciones y organizaciones que gestionan becas podrán demostrar el impacto de su inversión con datos concretos y reportes automatizados.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:24px;padding:40px 32px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid #3b82f6;text-align:center;transition:all .25s ease;"
+        onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,.12)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,.06)'">
+        <div style="font-size:2.8rem;margin-bottom:20px;">🏫</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:12px;">Coordinadores Académicos</h3>
+        <p style="color:#64748b;font-size:.9rem;line-height:1.7;">Identifican en tiempo real a los estudiantes que necesitan intervención, sin perder horas en análisis manuales de hojas de cálculo.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:24px;padding:40px 32px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid #8b5cf6;text-align:center;transition:all .25s ease;"
+        onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,.12)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,.06)'">
+        <div style="font-size:2.8rem;margin-bottom:20px;">🤝</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:12px;">Mentores y Tutores</h3>
+        <p style="color:#64748b;font-size:.9rem;line-height:1.7;">Acceden a perfiles detallados de sus mentorizados para personalizar cada sesión y maximizar el progreso de los estudiantes bajo su guía.</p>
+      </div>
+
+      <div style="background:#fff;border-radius:24px;padding:40px 32px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid #f59e0b;text-align:center;transition:all .25s ease;"
+        onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(0,0,0,.12)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,.06)'">
+        <div style="font-size:2.8rem;margin-bottom:20px;">📣</div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:#0f172a;margin-bottom:12px;">Directores y Patrocinadores</h3>
+        <p style="color:#64748b;font-size:.9rem;line-height:1.7;">Obtienen dashboards ejecutivos con métricas de impacto claras, perfectos para informes de rendición de cuentas y toma de decisiones estratégicas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CTA FINAL ░░ -->
+<section style="padding:100px 5%;background:linear-gradient(135deg,#081e3f 0%,#083d2f 100%);text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(16,185,129,.12) 0%,transparent 65%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;"></div>
+
+  <div style="position:relative;max-width:680px;margin:0 auto;">
+    <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,4.5vw,3rem);color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:20px;">
+      Tu programa de becas merece<br><span style="color:#10b981;">decisiones basadas en datos</span>
+    </h2>
+    <p style="color:rgba(255,255,255,.6);font-size:1.05rem;line-height:1.75;margin-bottom:44px;">
+      Descubre cómo ParticipApp transforma la gestión de la participación estudiantil. Mira nuestra demo y compruébalo tú mismo.
+    </p>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#10b981,#059669);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;padding:18px 46px;border-radius:50px;text-decoration:none;box-shadow:0 12px 40px rgba(16,185,129,.4);transition:transform .2s;"
+      onmouseover="this.style.transform='scale(1.05)'"
+      onmouseout="this.style.transform='scale(1)'">
+      ▶ Ver Demo ahora
+    </a>
+    <p style="color:rgba(255,255,255,.3);font-size:.82rem;margin-top:20px;">Sin registro. Sin tarjeta de crédito.</p>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer style="background:#060f1e;padding:32px 5%;text-align:center;border-top:1px solid rgba(255,255,255,.06);">
+  <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;">
+    Particip<span style="color:#10b981;">App</span>
+  </span>
+  <p style="color:rgba(255,255,255,.3);font-size:.82rem;margin-top:10px;">© 2025 ParticipApp · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
